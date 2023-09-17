@@ -1,0 +1,20 @@
+{
+    "reportName": "登录模块测试",
+    "testRuns": [],
+    "statistic": {
+        "failed": 0,
+        "broken": 1,
+        "skipped": 0,
+        "passed": 4,
+        "unknown": 0,
+        "total": 5
+    },
+    "time": {
+        "start": 1694503275557,
+        "stop": 1694503279388,
+        "duration": 3831,
+        "minDuration": 90,
+        "maxDuration": 1132,
+        "sumDuration": 3519
+    }
+}

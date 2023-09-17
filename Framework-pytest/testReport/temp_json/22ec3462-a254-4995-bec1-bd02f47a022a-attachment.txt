@@ -1,0 +1,3 @@
+INFO     Test:test_case-demo1.py:21 {},{'username':'liangchao'}
+INFO     Test:test_case-demo1.py:24 {'data': None, 'errorCode': 0, 'errorMsg': ''}
+INFO     Test:publicAssert.py:33 测试通过

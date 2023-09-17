@@ -1,0 +1,82 @@
+{
+  "uid" : "670556b9d6043539",
+  "name" : "test_01_demo[case1]",
+  "fullName" : "testCase.test_case-demo1.TestApi#test_01_demo",
+  "historyId" : "6063dbde777577e16d5851d5ce2ece5b",
+  "time" : {
+    "start" : 1694503276594,
+    "stop" : 1694503276893,
+    "duration" : 299
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: not all arguments converted during string formatting",
+  "statusTrace" : "self = <common.publicAssert.PublicAssert object at 0x000001C8ED8039A0>\n\n    def public_assert(self):\n        try:\n            # 断言状态\n            self.__assert_status_code()\n            # 断言“实际结果”和“预期结果”值\n>           self.__assert_expect()\n\ncommon\\publicAssert.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <common.publicAssert.PublicAssert object at 0x000001C8ED8039A0>\n\n    def __assert_expect(self):\n        \"\"\"断言预期结果和实际结果值\"\"\"\n        # 获取预期结果值 expect\n        expect = eval(self.testdata['expect'])\n        # 遍历expect字典数据，获取key，value\n        for k, v in expect.items():\n            # 根据k去响应数据中获取实际的值\n            res_value = jsonpath(self.res, \"$..\" + k)[0]\n            # 断言数据实际结果 和 预期结果\n>           assert str(res_value) == v, f\"实际结果：[{res_value}] 与预期结果：[{v}] 不符\"\nE           AssertionError: 实际结果：[-1] 与预期结果：[0] 不符\n\ncommon\\publicAssert.py:52: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <testCase.test_case-demo1.TestApi object at 0x000001C8ED7D61F0>\ncase = {'caseid': '', 'expect': \"{'errorCode':'0'}\", 'header': '{}', 'id': '2', ...}\n\n    @pytest.mark.parametrize(\"case\", test_data)\n    def test_01_demo(self, case):\n        # 实例化接口依赖对象\n        rely = Interface_Rely(test_data)\n        case[\"header\"],case[\"value\"] = rely.rely_run(case)\n        logger.info(f'{case[\"header\"]},{case[\"value\"]}')\n        # 实例化发送接口对象\n        http = SendHttp(case).run_request()\n        logger.info(http.json())\n        # 实例化断言对象\n        assert1 = PublicAssert(case, http)\n>       assert1.public_assert()\n\ntestCase\\test_case-demo1.py:27: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ncommon\\publicAssert.py:35: in public_assert\n    logger.error('失败',e)\nD:\\Python3.9\\lib\\logging\\__init__.py:1475: in error\n    self._log(ERROR, msg, args, **kwargs)\nD:\\Python3.9\\lib\\logging\\__init__.py:1589: in _log\n    self.handle(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:1599: in handle\n    self.callHandlers(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:1661: in callHandlers\n    hdlr.handle(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:952: in handle\n    self.emit(record)\nvenv\\lib\\site-packages\\_pytest\\logging.py:372: in emit\n    super().emit(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:1091: in emit\n    self.handleError(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:1083: in emit\n    msg = self.format(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:927: in format\n    return fmt.format(record)\nvenv\\lib\\site-packages\\_pytest\\logging.py:136: in format\n    return super().format(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:663: in format\n    record.message = record.getMessage()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <LogRecord: Test, 40, E:\\chenghao-vip7\\Framework3\\Framework-pytest\\common\\publicAssert.py, 35, \"失败\">\n\n    def getMessage(self):\n        \"\"\"\n        Return the message for this LogRecord.\n    \n        Return the message for this LogRecord after merging any user-supplied\n        arguments with the message.\n        \"\"\"\n        msg = str(self.msg)\n        if self.args:\n>           msg = msg % self.args\nE           TypeError: not all arguments converted during string formatting\n\nD:\\Python3.9\\lib\\logging\\__init__.py:367: TypeError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: not all arguments converted during string formatting",
+    "statusTrace" : "self = <common.publicAssert.PublicAssert object at 0x000001C8ED8039A0>\n\n    def public_assert(self):\n        try:\n            # 断言状态\n            self.__assert_status_code()\n            # 断言“实际结果”和“预期结果”值\n>           self.__assert_expect()\n\ncommon\\publicAssert.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <common.publicAssert.PublicAssert object at 0x000001C8ED8039A0>\n\n    def __assert_expect(self):\n        \"\"\"断言预期结果和实际结果值\"\"\"\n        # 获取预期结果值 expect\n        expect = eval(self.testdata['expect'])\n        # 遍历expect字典数据，获取key，value\n        for k, v in expect.items():\n            # 根据k去响应数据中获取实际的值\n            res_value = jsonpath(self.res, \"$..\" + k)[0]\n            # 断言数据实际结果 和 预期结果\n>           assert str(res_value) == v, f\"实际结果：[{res_value}] 与预期结果：[{v}] 不符\"\nE           AssertionError: 实际结果：[-1] 与预期结果：[0] 不符\n\ncommon\\publicAssert.py:52: AssertionError\n\nDuring handling of the above exception, another exception occurred:\n\nself = <testCase.test_case-demo1.TestApi object at 0x000001C8ED7D61F0>\ncase = {'caseid': '', 'expect': \"{'errorCode':'0'}\", 'header': '{}', 'id': '2', ...}\n\n    @pytest.mark.parametrize(\"case\", test_data)\n    def test_01_demo(self, case):\n        # 实例化接口依赖对象\n        rely = Interface_Rely(test_data)\n        case[\"header\"],case[\"value\"] = rely.rely_run(case)\n        logger.info(f'{case[\"header\"]},{case[\"value\"]}')\n        # 实例化发送接口对象\n        http = SendHttp(case).run_request()\n        logger.info(http.json())\n        # 实例化断言对象\n        assert1 = PublicAssert(case, http)\n>       assert1.public_assert()\n\ntestCase\\test_case-demo1.py:27: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ncommon\\publicAssert.py:35: in public_assert\n    logger.error('失败',e)\nD:\\Python3.9\\lib\\logging\\__init__.py:1475: in error\n    self._log(ERROR, msg, args, **kwargs)\nD:\\Python3.9\\lib\\logging\\__init__.py:1589: in _log\n    self.handle(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:1599: in handle\n    self.callHandlers(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:1661: in callHandlers\n    hdlr.handle(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:952: in handle\n    self.emit(record)\nvenv\\lib\\site-packages\\_pytest\\logging.py:372: in emit\n    super().emit(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:1091: in emit\n    self.handleError(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:1083: in emit\n    msg = self.format(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:927: in format\n    return fmt.format(record)\nvenv\\lib\\site-packages\\_pytest\\logging.py:136: in format\n    return super().format(record)\nD:\\Python3.9\\lib\\logging\\__init__.py:663: in format\n    record.message = record.getMessage()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <LogRecord: Test, 40, E:\\chenghao-vip7\\Framework3\\Framework-pytest\\common\\publicAssert.py, 35, \"失败\">\n\n    def getMessage(self):\n        \"\"\"\n        Return the message for this LogRecord.\n    \n        Return the message for this LogRecord after merging any user-supplied\n        arguments with the message.\n        \"\"\"\n        msg = str(self.msg)\n        if self.args:\n>           msg = msg % self.args\nE           TypeError: not all arguments converted during string formatting\n\nD:\\Python3.9\\lib\\logging\\__init__.py:367: TypeError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a5e74e5bed816499",
+      "name" : "log",
+      "source" : "a5e74e5bed816499.txt",
+      "type" : "text/plain",
+      "size" : 218
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_case-demo1"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApi"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QBQFGNQ"
+  }, {
+    "name" : "thread",
+    "value" : "2464-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testCase.test_case-demo1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "case",
+    "value" : "{'id': '2', 'interfaceUrl': 'https://www.wanandroid.com/user/register', 'name': 'register', 'method': 'post', 'value': \"{'username':'liangchao03','password':'123456','repassword':'123456'}\", 'header': '{}', 'rely': 'n', 'caseid': '', 'expect': \"{'errorCode':'0'}\"}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "670556b9d6043539.json",
+  "parameterValues" : [ "{'id': '2', 'interfaceUrl': 'https://www.wanandroid.com/user/register', 'name': 'register', 'method': 'post', 'value': \"{'username':'liangchao03','password':'123456','repassword':'123456'}\", 'header': '{}', 'rely': 'n', 'caseid': '', 'expect': \"{'errorCode':'0'}\"}" ]
+}

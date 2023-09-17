@@ -1,0 +1,73 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-QBQFGNQ",
+    "children" : [ {
+      "name" : "2464-MainThread",
+      "children" : [ {
+        "name" : "test_01_demo[case1]",
+        "uid" : "670556b9d6043539",
+        "parentUid" : "6bf0d75de67e83f34e147941d51f9f46",
+        "status" : "broken",
+        "time" : {
+          "start" : 1694503276594,
+          "stop" : 1694503276893,
+          "duration" : 299
+        },
+        "flaky" : false,
+        "parameters" : [ "{'id': '2', 'interfaceUrl': 'https://www.wanandroid.com/user/register', 'name': 'register', 'method': 'post', 'value': \"{'username':'liangchao03','password':'123456','repassword':'123456'}\", 'header': '{}', 'rely': 'n', 'caseid': '', 'expect': \"{'errorCode':'0'}\"}" ]
+      }, {
+        "name" : "test_01_demo[case2]",
+        "uid" : "616c1a6be6a3d2f8",
+        "parentUid" : "6bf0d75de67e83f34e147941d51f9f46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1694503277192,
+          "stop" : 1694503277282,
+          "duration" : 90
+        },
+        "flaky" : false,
+        "parameters" : [ "{'id': '3', 'interfaceUrl': 'https://www.wanandroid.com/user/logout/json', 'name': 'logout', 'method': 'get', 'value': \"{'username':'liangchao'}\", 'header': '{}', 'rely': 'n', 'caseid': '', 'expect': \"{'errorCode':'0'}\"}" ]
+      }, {
+        "name" : "test_01_demo[case0]",
+        "uid" : "d9576bd027cc7495",
+        "parentUid" : "6bf0d75de67e83f34e147941d51f9f46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1694503275557,
+          "stop" : 1694503276590,
+          "duration" : 1033
+        },
+        "flaky" : false,
+        "parameters" : [ "{'id': '1', 'interfaceUrl': 'https://www.wanandroid.com/user/login', 'name': 'login', 'method': 'post', 'value': \"{'username':'liangchao','password':'123456'}\", 'header': '{}', 'rely': 'n', 'caseid': '', 'expect': \"{'errorCode':'0','username':'liangchao'}\"}" ]
+      }, {
+        "name" : "test_01_demo[case4]",
+        "uid" : "9b857337cffc3e61",
+        "parentUid" : "6bf0d75de67e83f34e147941d51f9f46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1694503278256,
+          "stop" : 1694503279388,
+          "duration" : 1132
+        },
+        "flaky" : false,
+        "parameters" : [ "{'id': '5', 'interfaceUrl': 'https://www.wanandroid.com/lg/collect/addtool/json', 'name': 'collect', 'method': 'post', 'value': \"{'name':'${username}','link':'www.baidu.com'}\", 'header': '{\"cookie\":\"${Set-Cookie}\"}', 'rely': 'y', 'caseid': '1', 'expect': \"{'errorCode':'0'}\"}" ]
+      }, {
+        "name" : "test_01_demo[case3]",
+        "uid" : "49035b7f81028efd",
+        "parentUid" : "6bf0d75de67e83f34e147941d51f9f46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1694503277286,
+          "stop" : 1694503278251,
+          "duration" : 965
+        },
+        "flaky" : false,
+        "parameters" : [ "{'id': '4', 'interfaceUrl': 'https://www.wanandroid.com/user/lg/userinfo/json', 'name': 'getinfo', 'method': 'get', 'value': '{}', 'header': '{\"cookie\":\"${Set-Cookie}\"}', 'rely': 'y', 'caseid': '1', 'expect': \"{'errorCode':'0'}\"}" ]
+      } ],
+      "uid" : "6bf0d75de67e83f34e147941d51f9f46"
+    } ],
+    "uid" : "837c418f2cbc89a560904b20bb457917"
+  } ]
+}

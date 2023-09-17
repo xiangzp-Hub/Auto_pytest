@@ -1,0 +1,25 @@
+-
+    expect: '0'
+    id: '1'
+    interfaceUrl: 'https://www.wanandroid.com/user/login'
+    method: post
+    name: login
+    value: '{''username'':''liangchao'',''password'':''123456''}'
+    header: '{}'
+-
+    expect: '0'
+    id: '2'
+    interfaceUrl: 'https://www.wanandroid.com/user/register'
+    method: post
+    name: register
+    value: '{''username'':''liangchao03'',''password'':''123456'',''repassword'':''123456''}'
+    header: '{}'
+-
+    expect: '0'
+    id: '3'
+    interfaceUrl: 'https://www.wanandroid.com/user/logout/json'
+    method: get
+    name: logout
+    value: '{''username'':''liangchao''}'
+    header: '{}'
+

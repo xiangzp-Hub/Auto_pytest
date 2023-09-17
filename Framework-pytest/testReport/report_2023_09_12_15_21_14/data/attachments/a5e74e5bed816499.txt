@@ -1,0 +1,2 @@
+INFO     Test:test_case-demo1.py:21 {},{'username':'liangchao03','password':'123456','repassword':'123456'}
+INFO     Test:test_case-demo1.py:24 {'data': None, 'errorCode': -1, 'errorMsg': '用户名已经被注册！'}

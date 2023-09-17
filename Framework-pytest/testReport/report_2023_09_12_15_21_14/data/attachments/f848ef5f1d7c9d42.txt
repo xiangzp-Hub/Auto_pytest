@@ -1,0 +1,3 @@
+INFO     Test:test_case-demo1.py:21 {},{'username':'liangchao','password':'123456'}
+INFO     Test:test_case-demo1.py:24 {'data': {'admin': False, 'chapterTops': [], 'coinCount': 46636, 'collectIds': [12489, 12554, 20867, 20535, 20932, 20931, 20925, 20923, 21681, 1165, 2334, -1, 23168, 23646, 24990, 25477, 26578, 26503, 26583, 12240, 24206, 26795, -1], 'email': 'rainshine1190@126.com', 'icon': '', 'id': 17180, 'nickname': 'liangchao', 'password': '', 'publicName': 'liangchao', 'token': '', 'type': 0, 'username': 'liangchao'}, 'errorCode': 0, 'errorMsg': ''}
+INFO     Test:publicAssert.py:33 测试通过

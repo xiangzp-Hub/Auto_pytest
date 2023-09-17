@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "TypeError: not all arguments converted during string formatting",
+      "children" : [ {
+        "name" : "test_01_demo[case1]",
+        "uid" : "670556b9d6043539",
+        "parentUid" : "6f17ac034aa64d4177ecaed6289c0744",
+        "status" : "broken",
+        "time" : {
+          "start" : 1694503276594,
+          "stop" : 1694503276893,
+          "duration" : 299
+        },
+        "flaky" : false,
+        "parameters" : [ "{'id': '2', 'interfaceUrl': 'https://www.wanandroid.com/user/register', 'name': 'register', 'method': 'post', 'value': \"{'username':'liangchao03','password':'123456','repassword':'123456'}\", 'header': '{}', 'rely': 'n', 'caseid': '', 'expect': \"{'errorCode':'0'}\"}" ]
+      } ],
+      "uid" : "6f17ac034aa64d4177ecaed6289c0744"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}
